@@ -13,16 +13,39 @@
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
 
-    <div style="background-image: url('{{ '/assets/images/G3_zoom2.png' | relative_url }}'); 
-           background-size: cover; 
-           background-position: center; 
-           width: 100%; 
-           height: 50vh;
-           display: flex; 
-           align-items: center; 
-           justify-content: center;">
-       <h1 style="color: white; font-size: 3rem; z-index: 10;">Welcome to My Site</h1>
+<!-- Here we have our image -->
+    
+<style>
+      /* Default Styles */
+      .hero-section {
+        background-image: url('{{ "/assets/images/G3_zoom2.png" | relative_url }}');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 50vh; /* Default height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    
+      /* For Smaller Screens (Mobile) */
+      @media (max-width: 768px) {
+        .hero-section {
+          height: 40vh; /* Reduced height for smaller screens */
+        }
+    
+        .hero-section h1 {
+          font-size: 2rem; /* Make the title smaller on mobile */
+        }
+      }
+    </style>
+    
+    <div class="hero-section">
+      <h1 style="color: white; font-size: 3rem; z-index: 10;">Welcome to My Site</h1>
     </div>
+
+<!-- other things -->
     
     <div class="initial-content">
       {{ content }}
