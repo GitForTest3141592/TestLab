@@ -18,10 +18,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "TestLab Site"
 title_separator          : "-"
-subtitle                 : "Where we test our site"
+subtitle                 : "We can put a sub title here"
 name                     : #
-description              : "Description of our project"
-url                      : "https://GitForTest3141592.github.io"
+description              : "Here we will put the short description of our project"
+url                      : "https://github.com/GitForTest3141592"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/G3.png"
@@ -112,11 +112,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Alfredo"
+  name             : "Here we can put the authors"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "we are noob, but we can learn"
-  location         : "We are virtual baby"
-  email            :
+  bio              : "bio"
+  location         : "Everywhere"
+  email            : "our email here"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
