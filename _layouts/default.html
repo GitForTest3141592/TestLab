@@ -9,6 +9,17 @@
     {% include head/custom.html %}
   </head>
 
+  <div style="background-image: url('{{ '/assets/images/G3_zoom2.png' | relative_url }}'); 
+            background-size: cover; 
+            background-position: center; 
+            width: 100%; 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;">
+  <h1 style="color: white; font-size: 3rem; z-index: 10;">Welcome to My Site</h1>
+</div>
+
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
     {% include_cached masthead.html %}
