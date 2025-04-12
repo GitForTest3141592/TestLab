@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: Documentation
-permalink: /Documentation/
+permalink: /TS/
 classes: wide
 ---
 
