@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: Diagnostics
-permalink: /Documentation/
+permalink: /Diagnostics/
 ---
 
 We will update diagnositcs very soon!!
