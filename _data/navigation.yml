@@ -13,8 +13,8 @@ main:
 
 docs:
   - title: "One Fluid Model"
-  url: /docs/One Fluid Model/
+  url: /docs/OneFluidModel/
   - title: "Diagnostics"
   children:
-    - title: "Pick Up Coils"
-  url: /docs/Pick Up Coils/
+    - title: "PickUpCoils"
+  url: /docs/PickUpCoils/
