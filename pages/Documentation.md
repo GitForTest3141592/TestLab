@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: archive
 title: Documentation
 permalink: /Documentation/
 sidebar: 
