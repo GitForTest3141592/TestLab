@@ -1,10 +1,7 @@
 ---
 layout: splash
-title: Documentation
+title: Diagnostics
 permalink: /Documentation/
-classes: wide
 ---
 
-
-
-Documentation working in progress!
+We will update diagnositcs very soon!!
