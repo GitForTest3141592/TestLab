@@ -10,3 +10,9 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+docs:
+  - title: "One Fluid Model"
+  url: /docs/One Fluid Model/
+  - title: "Diagnostics"
+  url: /docs/Diagnostics/
