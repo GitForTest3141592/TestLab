@@ -15,4 +15,6 @@ docs:
   - title: "One Fluid Model"
   url: /docs/One Fluid Model/
   - title: "Diagnostics"
-  url: /docs/Diagnostics/
+  children:
+    - title: "Pick Up Coils"
+  url: /docs/Pick Up Coils/
