@@ -3,7 +3,7 @@ layout: splash
 title: Documentation
 permalink: /Documentation/
 sidebar: 
-  nav: "docs"
+  nav:  "docs"
 ---
 
 
