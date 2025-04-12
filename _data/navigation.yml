@@ -12,9 +12,15 @@ main:
   #   url: /sitemap/
 
 docs:
-  - title: "One Fluid Model"
+
+  - title: "Physics"
+  children:
+    -title: "One Fluid Mode"
     url: /docs/OneFluidModel/
-  - title: "Diagnostics"
+
+- title: "Diagnostics"
   children:
     - title: "PickUpCoils"
     url: /docs/PickUpCoils/
+    - title: "Thomson Scattering"
+    url: /docs/ThomsonScattering/
