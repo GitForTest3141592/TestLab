@@ -1,8 +1,9 @@
 ---
-layout: splash
+layout: single
 title: Documentation
 permalink: /Documentation/
-classes: wide
+sidebar: 
+  nav:  "docs"
 ---
 
 

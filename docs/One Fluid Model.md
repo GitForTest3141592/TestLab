@@ -1,10 +1,7 @@
 ---
 layout: splash
 title: Documentation
-permalink: /Documentation/
-classes: wide
+permalink: /OneFluidModel/
 ---
 
-
-
-Documentation working in progress!
+Documentation working in progress, uajo!

@@ -1,10 +1,7 @@
 ---
 layout: splash
-title: Documentation
-permalink: /Documentation/
-classes: wide
+title: Diagnostics
+permalink: /Diagnostics/
 ---
 
-
-
-Documentation working in progress!
+We will update diagnositcs very soon!!

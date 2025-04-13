@@ -1,10 +1,7 @@
 ---
 layout: splash
 title: Documentation
-permalink: /Documentation/
-classes: wide
+permalink: /PickUpCoils/
 ---
 
-
-
-Documentation working in progress!
+Here we put the docs for pick up coils...

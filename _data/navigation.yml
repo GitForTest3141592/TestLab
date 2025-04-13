@@ -10,3 +10,16 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+docs:
+  - title: "Physics"
+    children:
+      - title: "One Fluid Mode"
+        url: /docs/OneFluidModel/
+
+  - title: "Diagnostics"
+    children:
+      - title: "PickUpCoils"
+        url: /docs/PickUpCoils/
+      - title: "Thomson Scattering"
+        url: /docs/ThomsonScattering/
