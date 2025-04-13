@@ -2,6 +2,8 @@
 layout: default
 title: Fourier Transform
 permalink: /Fourier-Transform/
+header: 
+  teaser: /assets/images/Equi.png
 ---
 # Fourier Transform
 
