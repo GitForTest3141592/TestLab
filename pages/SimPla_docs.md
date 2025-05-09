@@ -4,7 +4,7 @@ title: SimPla - Simulated Plasma
 permalink: /SimPla/
 ---
 
-EQUILIBRIUM SOLVER
+# Equilibrium Solver
 
 If you need to solve a plasma equilibrium problem, open Main_equilibrium.m.
 
