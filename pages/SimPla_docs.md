@@ -18,9 +18,9 @@ First steps require to define essential geometrical and plasma parameters of you
 
 All geometrical parameters are collected in a structure called `Geo` . In **Main_equilibrium.m**, we define first two geometrical parameters: 
 
-* major radius: Geo.R0 = 6 [m]
+* major radius: `Geo.R0 = 6` [m]
 
-* minor radius: Geo.a = 2 [m] 
+* minor radius: `Geo.a = 2` [m] 
 
 ```matlab
 %% Define Geometry (Geo)
@@ -107,7 +107,7 @@ Now, we can see a plot of the poloidal flux ψ [Wb/radians] `(Equi.psi)`.
 
 We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
 
-Once you normalise the poloidal flux ψn (see *Equilibrium_normalise.m*), you can derive all MHD fields (vEqui.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
+Once you normalise the poloidal flux ψn (see *Equilibrium_normalise.m*), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
 
 Use *Equilibrium_MHD_Fields.m* function if you are interested in retrieving MHD fields and *Equilibrium_KineticProfiles.m* function if you are interested in kinetic fields.
 
