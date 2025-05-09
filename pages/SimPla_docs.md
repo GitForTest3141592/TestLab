@@ -31,39 +31,39 @@ So, let’s now open **Equi_type_Jt_I_Config.m**.
 
 First plasma equilibrium parameters are related to the desired plasma shape (for a better understanding, please refer to **Appendix A**), and they are:
 
-*upper elongation: Equi.Config.param.k1 = 1.7
+* upper elongation: `Equi.Config.param.k1 = 1.7`
 
-*lower elongation: Equi.Config.param.k2 = 2
+* lower elongation: `Equi.Config.param.k2 = 2`
 
-*upper triangularity: Equi.Config.param.d1 = 0.5
+* upper triangularity: `Equi.Config.param.d1 = 0.5`
 
-*lower triangularity: Equi.Config.param.d2 = 0.5
+* lower triangularity: `Equi.Config.param.d2 = 0.5`
 
-*upper inner angle: Equi.Config.param.gamma_n_1 = 0 [radians]
+* upper inner angle: `Equi.Config.param.gamma_n_1 = 0` [radians]
 
-*lower inner angle: Equi.Config.param.gamma_n_2 = pi/3 [radians]
+* lower inner angle: Equi.Config.param.gamma_n_2 = pi/3 [radians]
 
-*upper outer angle: Equi.Config.param.gamma_p_1 = 0 [radians]
+* upper outer angle: Equi.Config.param.gamma_p_1 = 0 [radians]
 
-*lower outer angle: Equi.Config.param.gamma_p_2 = pi/6 [radians]
+* lower outer angle: Equi.Config.param.gamma_p_2 = pi/6 [radians]
 
 Other parameters are related to the plasma current profile and magnetic field:
 
-*total plasma current Equi.Config.param.Ip = -10e6 [A]
+* total plasma current `Equi.Config.param.Ip = -10e6` [A]
 
-*plasma profile coefficient β0: Equi.Config.param.beta0 = 0.5
+* plasma profile coefficient β0: Equi.Config.param.beta0 = 0.5
 
-*plasma profile coefficient α1: Equi.Config.param.alpha1 = 2
+* plasma profile coefficient α1: Equi.Config.param.alpha1 = 2
 
-*plasma profile coefficient α2: Equi.Config.param.alpha2 = 2
+* plasma profile coefficient α2: Equi.Config.param.alpha2 = 2
 
-*toroidal magnetic field on axis: Equi.Config.param.Bt0 = 5;
+* toroidal magnetic field on axis: Equi.Config.param.Bt0 = 5;
 
 And lastly, parameters related to the numerical solver:
 
-*Maximum number of iterations: Equi.Config.param.Max_iter = 30
+* Maximum number of iterations: Equi.Config.param.Max_iter = 30
 
-*Stop condition on convergence error: Equi.Config.param.Error_conv = 1e-5
+* Stop condition on convergence error: Equi.Config.param.Error_conv = 1e-5
 
 
 ## Python Guide
