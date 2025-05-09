@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: TemplateDocs
 title: SimPla - Simulated Plasma
 permalink: /SimPla/
 ---
