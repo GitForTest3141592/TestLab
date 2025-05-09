@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: Documentation
+title: SimPla - Simulated Plasma
 permalink: /OneFluidModel/
 ---
 
