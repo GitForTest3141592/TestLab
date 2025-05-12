@@ -97,7 +97,7 @@ end
 ```
 
 Now, let's return to *Main_equilibrium.m* and let's run the code. 
-<span style="font-size: 60px; color: green;">
+<span style="font-size: 40px; color: green;">
   <i class="fas fa-play-circle"></i>
 </span>
 
@@ -153,7 +153,7 @@ Here is a basic illustration of all parameters needed for the parametrisation of
   <img src="{{ '/assets/images/SimPla_parametrisation.png' | relative_url }}" alt="Parametrisation" width="60%"/>
 </p>
 
-Cross-section parametrisation:
+**Cross-section parametrisation:**
 
   Normalised Cylindrical Coordinates:
   
