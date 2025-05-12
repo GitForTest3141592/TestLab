@@ -157,19 +157,19 @@ Cross-section parametrisation:
 
   Normalised Cylindrical Coordinates:
   
-    * $ \xi =  \frac{R-R_0}{a} $
-    * $ \zeta =  \frac{Z}{a} $
+  * $ \xi =  \frac{R-R_0}{a} $
+  * $ \zeta =  \frac{Z}{a} $
     
   Parameters:
   
-    * $ \delta_1 = $ upper triangularity
-    * $ \delta_2 = $ lower triangularity
-    * $ \kappa_1 = $ upper elongation
-    * $ \kappa_2 = $ lower elongation
-    * $ \gamma^-_1 = $ inner upper angle
-    * $ \gamma^-_2 = $ inner lower angle
-    * $ \gamma^+_1 = $ outer upper angle
-    * $ \gamma^+_2 = $ outer lower angle
+  * $ \delta_1 = $ upper triangularity
+  * $ \delta_2 = $ lower triangularity
+  * $ \kappa_1 = $ upper elongation
+  * $ \kappa_2 = $ lower elongation
+  * $ \gamma^-_1 = $ inner upper angle
+  * $ \gamma^-_2 = $ inner lower angle
+  * $ \gamma^+_1 = $ outer upper angle
+  * $ \gamma^+_2 = $ outer lower angle
 
 Shape example 1: **Single X point** ($ \gamma^-_1 = \gamma^+_1 = 0° $)
 
@@ -182,13 +182,12 @@ The reference for plasma toroidal current density profile is:
 **Coleman M. and McIntosh S., 2020, The design and optimisation of tokamak poloidal field systems in the BLUEPRINT framework, Fusion Eng. Des. 154 111544**
 
 Where Jt is defined as:
+
 $$
 J_t =
 \begin{cases}
-
-\lambda (\beta_0 \cdot \frac{R}{R_0} + (1 - \beta_0) \cdot \frac{R_0}{R}) \cdot (1 - \psi_n^\alpha_1)^\alpha_2 & \text{for } 0< \psi_n < 1 \\
-0 & text{elsewhere}
-
+\lambda \left( \beta_0 \cdot \frac{R}{R_0} + (1 - \beta_0) \cdot \frac{R_0}{R} \right) \cdot \left(1 - \psi_n^{\alpha_1}\right)^{\alpha_2} & \text{for } 0 < \psi_n < 1 \\
+0 & \text{elsewhere}
 \end{cases}
 $$
 
