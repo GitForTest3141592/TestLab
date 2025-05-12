@@ -58,11 +58,11 @@ Other parameters are related to the plasma current profile and magnetic field:
 
 * total plasma current `Equi.Config.param.Ip = -10e6` [A]
 
-* plasma profile coefficient β0: `Equi.Config.param.beta0 = 0.5`
+* plasma profile coefficient $β_0$: `Equi.Config.param.beta0 = 0.5`
 
-* plasma profile coefficient α1: `Equi.Config.param.alpha1 = 2`
+* plasma profile coefficient $α_1$: `Equi.Config.param.alpha1 = 2`
 
-* plasma profile coefficient α2: `Equi.Config.param.alpha2 = 2`
+* plasma profile coefficient $α_2$: `Equi.Config.param.alpha2 = 2`
 
 * toroidal magnetic field on axis: `Equi.Config.param.Bt0 = 5`;
 
@@ -103,19 +103,19 @@ Now, let's return to *Main_equilibrium.m* and let's run the code.
 
 All equilibrium quantities are computed and stored in `Equi` structure.
 
-Now, we can see a plot of the poloidal flux ψ [Wb/radians] `(Equi.psi)`.
+Now, we can see a plot of the poloidal flux $ψ$ [Wb/radians] `(Equi.psi)`.
 
 ![Solution Convergence](/TestLab/assets/images/SimPla_convergence_solution.png)
 
 We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
 
 <p align="center">
-  <img src="{{ '/TestLab/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="50%"/>
+  <img src="{{ '/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="50%"/>
 </p>
 
-Once you normalise the poloidal flux ψn (see *Equilibrium_normalise.m*), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
+Once you normalise the poloidal flux $ψ_n$ (see **Equilibrium_normalise.m**), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
 
-Use *Equilibrium_MHD_Fields.m* function if you are interested in retrieving MHD fields and *Equilibrium_KineticProfiles.m* function if you are interested in kinetic fields.
+Use **Equilibrium_MHD_Fields.m** function if you are interested in retrieving MHD fields and *Equilibrium_KineticProfiles.m* function if you are interested in kinetic fields.
 
 **Attention:** before computing kinetic fields, you need to input some parameters on your plasma density profile:
 
