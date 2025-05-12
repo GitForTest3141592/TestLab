@@ -22,7 +22,7 @@ subtitle                 : "We can put a sub title here"
 name                     : #
 description              : "Here we will put the short description of our project"
 url                      : "https://github.com/GitForTest3141592"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+baseurl                  : "/TestLab"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/G3.png"
 logo                     : "/assets/images/Logo.png"
