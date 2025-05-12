@@ -325,3 +325,11 @@ defaults:
       share: true
       related: true
       math: true
+
+    # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      math: true
