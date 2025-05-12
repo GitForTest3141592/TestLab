@@ -103,8 +103,9 @@ Now, we can see a plot of the poloidal flux ψ [Wb/radians] `(Equi.psi)`.
 
 ![Solution Convergence](https://GitForTest3141592.github.io/TestLab/assets/images/SimPla_convergence_solution.png)
 
-
 We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
+
+![LCFS](https://GitForTest3141592.github.io/TestLab/assets/images/SimPla_LCFS.png)
 
 Once you normalise the poloidal flux ψn (see *Equilibrium_normalise.m*), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
 
