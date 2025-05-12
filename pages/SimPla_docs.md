@@ -132,13 +132,13 @@ Use **Equilibrium_MHD_Fields.m** function if you are interested in retrieving MH
 Here are some examples of the kinetic profiles **n,p** and **T** vs **$ψ_n$**.
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_kinetic_profiles.png' | relative_url }}" alt="Kinetics Profiles" width="80%"/>
+  <img src="{{ '/assets/images/SimPla_kinetic_profiles.png' | relative_url }}" alt="Kinetics Profiles" width="50%"/>
 </p>
 
 We can now also have a look at all fields that we have retrieved from the equilibrium solution.
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_MHD_fields.png' | relative_url }}" alt="MHD fields" width="100%"/>
+  <img src="{{ '/assets/images/SimPla_MHD_fields.png' | relative_url }}" alt="MHD fields" width="70%"/>
 </p>
 
 ### APPENDIX A
@@ -150,7 +150,7 @@ Our reference to the parametrisation of the plasma shape is:
 Here is a basic illustration of all parameters needed for the parametrisation of the desired plasma shape. Differently from our reference, angles were denoted with $\gamma$ instead of $\psi$ to avoid misinterpretation with the poloidal flux.
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_parametrisation.png' | relative_url }}" alt="Parametrisation" width="50%"/>
+  <img src="{{ '/assets/images/SimPla_parametrisation.png' | relative_url }}" alt="Parametrisation" width="60%"/>
 </p>
 
 Cross-section parametrisation:
