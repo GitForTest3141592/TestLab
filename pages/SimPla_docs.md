@@ -95,7 +95,10 @@ Equi.Config.param.alpha2 = 2;
 end
 ```
 
-Now, let's return to *Main_equilibrium.m* and let's run the code. <span style="font-size: 2em; color: #28a745;">▶</span>
+Now, let's return to *Main_equilibrium.m* and let's run the code. 
+<p align="center" style="font-size: 60px; color: green;">
+  <i class="fas fa-play-circle"></i>
+</p>
 
 All equilibrium quantities are computed and stored in `Equi` structure.
 
@@ -106,7 +109,7 @@ Now, we can see a plot of the poloidal flux ψ [Wb/radians] `(Equi.psi)`.
 We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="30%"/>
+  <img src="{{ '/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="50%"/>
 </p>
 
 Once you normalise the poloidal flux ψn (see *Equilibrium_normalise.m*), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
