@@ -157,7 +157,7 @@ Cross-section parametrisation:
 
 Shape example 1: **Single X point** ($ \gamma^-_1 = \gamma^+_1 = 0° $)
 
-![Parametrisation ITER](/assets/images/SimPla_parametrisation_ITER.png)
+![Parametrisation ITER](/assets/images/SimPla_parametrisationITER.png)
 
 The reference for plasma toroidal current density profile is:
 
