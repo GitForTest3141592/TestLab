@@ -105,17 +105,19 @@ All equilibrium quantities are computed and stored in `Equi` structure.
 
 Now, we can see a plot of the poloidal flux $ψ$ [Wb/radians] `(Equi.psi)`.
 
-![Solution Convergence](/TestLab/assets/images/SimPla_convergence_solution.png)
+<p align="center">
+  <img src="{{ '/assets/images/SimPla_convergence_solution.png' | relative_url }}" alt="Solution Convergence" width="100%"/>
+</p>
 
 We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="50%"/>
+  <img src="{{ '/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="60%"/>
 </p>
 
 Once you normalise the poloidal flux $ψ_n$ (see **Equilibrium_normalise.m**), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
 
-Use **Equilibrium_MHD_Fields.m** function if you are interested in retrieving MHD fields and *Equilibrium_KineticProfiles.m* function if you are interested in kinetic fields.
+Use **Equilibrium_MHD_Fields.m** function if you are interested in retrieving MHD fields and **Equilibrium_KineticProfiles.m** function if you are interested in kinetic fields.
 
 **Attention:** before computing kinetic fields, you need to input some parameters on your plasma density profile:
 
@@ -129,11 +131,15 @@ Use **Equilibrium_MHD_Fields.m** function if you are interested in retrieving MH
 
 Here are some examples of the kinetic profiles **n,p** and **T** vs **$ψ_n$**.
 
-![Kinetics Profiles](/TestLab/assets/images/SimPla_kinetic_profiles.png)
+<p align="center">
+  <img src="{{ '/assets/images/SimPla_kinetic_profiles.png' | relative_url }}" alt="Kinetics Profiles" width="80%"/>
+</p>
 
 We can now also have a look at all fields that we have retrieved from the equilibrium solution.
 
-![MHD fields](/TestLab/assets/images/SimPla_MHD_fields.png)
+<p align="center">
+  <img src="{{ '/assets/images/SimPla_MHD_fields.png' | relative_url }}" alt="MHD fields" width="100%"/>
+</p>
 
 ### APPENDIX A
 
@@ -143,13 +149,19 @@ Our reference to the parametrisation of the plasma shape is:
 
 Here is a basic illustration of all parameters needed for the parametrisation of the desired plasma shape. Differently from our reference, angles were denoted with $\gamma$ instead of $\psi$ to avoid misinterpretation with the poloidal flux.
 
-![Parametrisation](/TestLab/assets/images/SimPla_parametrisation.png)
+<p align="center">
+  <img src="{{ '/assets/images/SimPla_parametrisation.png' | relative_url }}" alt="Parametrisation" width="100%"/>
+</p>
 
 Cross-section parametrisation:
+
   Normalised Cylindrical Coordinates:
+  
     * $ \xi =  \frac{R-R_0}{a} $
     * $ \zeta =  \frac{Z}{a} $
+    
   Parameters:
+  
     * $ \delta_1 = $ upper triangularity
     * $ \delta_2 = $ lower triangularity
     * $ \kappa_1 = $ upper elongation
@@ -161,7 +173,9 @@ Cross-section parametrisation:
 
 Shape example 1: **Single X point** ($ \gamma^-_1 = \gamma^+_1 = 0° $)
 
-![Parametrisation ITER](/TestLab/assets/images/SimPla_parametrisationITER.png)
+<p align="center">
+  <img src="{{ '/assets/images/SimPla_parametrisationITER.png' | relative_url }}" alt="Parametrisation ITER" width="70%"/>
+</p>
 
 The reference for plasma toroidal current density profile is:
 
