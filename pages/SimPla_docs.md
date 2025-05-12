@@ -105,12 +105,12 @@ All equilibrium quantities are computed and stored in `Equi` structure.
 
 Now, we can see a plot of the poloidal flux ψ [Wb/radians] `(Equi.psi)`.
 
-![Solution Convergence](/assets/images/SimPla_convergence_solution.png)
+![Solution Convergence](/TestLab/assets/images/SimPla_convergence_solution.png)
 
 We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="50%"/>
+  <img src="{{ '/TestLab/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="50%"/>
 </p>
 
 Once you normalise the poloidal flux ψn (see *Equilibrium_normalise.m*), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
@@ -129,11 +129,11 @@ Use *Equilibrium_MHD_Fields.m* function if you are interested in retrieving MHD 
 
 Here are some examples of the kinetic profiles **n,p** and **T** vs **$ψ_n$**.
 
-![Kinetics Profiles](/assets/images/SimPla_kinetic_profiles.png)
+![Kinetics Profiles](/TestLab/assets/images/SimPla_kinetic_profiles.png)
 
 We can now also have a look at all fields that we have retrieved from the equilibrium solution.
 
-![MHD fields](/assets/images/SimPla_MHD_fields.png)
+![MHD fields](/TestLab/assets/images/SimPla_MHD_fields.png)
 
 ### APPENDIX A
 
@@ -143,7 +143,7 @@ Our reference to the parametrisation of the plasma shape is:
 
 Here is a basic illustration of all parameters needed for the parametrisation of the desired plasma shape. Differently from our reference, angles were denoted with $\gamma$ instead of $\psi$ to avoid misinterpretation with the poloidal flux.
 
-![Parametrisation](/assets/images/SimPla_parametrisation.png)
+![Parametrisation](/TestLab/assets/images/SimPla_parametrisation.png)
 
 Cross-section parametrisation:
   Normalised Cylindrical Coordinates:
@@ -161,7 +161,7 @@ Cross-section parametrisation:
 
 Shape example 1: **Single X point** ($ \gamma^-_1 = \gamma^+_1 = 0° $)
 
-![Parametrisation ITER](/assets/images/SimPla_parametrisationITER.png)
+![Parametrisation ITER](/TestLab/assets/images/SimPla_parametrisationITER.png)
 
 The reference for plasma toroidal current density profile is:
 
