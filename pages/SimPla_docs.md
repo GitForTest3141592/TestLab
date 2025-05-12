@@ -101,9 +101,7 @@ All equilibrium quantities are computed and stored in *“Equi”* structure.
 
 Now, we can see a plot of the poloidal flux ψ [Wb/radians] `(Equi.psi)`.
 
-ψ map at the second-to-last iteration;   ψ map at the last iteration;
-
-ψ solution converge error;
+![Solution Convergence](../../assets/images/SimPla_convergence_solution.png)
 
 We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
 
