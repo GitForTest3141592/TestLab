@@ -95,9 +95,9 @@ Equi.Config.param.alpha2 = 2;
 end
 ```
 
-Now, let's return to *Main_equilibrium.m* and let's run the code.
+Now, let's return to *Main_equilibrium.m* and let's run the code. <span style="font-size: 2em; color: #28a745;">▶</span>
 
-All equilibrium quantities are computed and stored in *“Equi”* structure.
+All equilibrium quantities are computed and stored in `Equi` structure.
 
 Now, we can see a plot of the poloidal flux ψ [Wb/radians] `(Equi.psi)`.
 
@@ -105,7 +105,9 @@ Now, we can see a plot of the poloidal flux ψ [Wb/radians] `(Equi.psi)`.
 
 We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
 
-![LCFS](/assets/images/SimPla_LCFS.png)
+<p align="center">
+  <img src="{{ '/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="30%"/>
+</p>
 
 Once you normalise the poloidal flux ψn (see *Equilibrium_normalise.m*), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
 
@@ -113,17 +115,21 @@ Use *Equilibrium_MHD_Fields.m* function if you are interested in retrieving MHD 
 
 **Attention:** before computing kinetic fields, you need to input some parameters on your plasma density profile:
 
-* peak plasma density: `Equi.Config.param_kinetic.n0 = 1e20` [m-3]
+* peak plasma density $n_0$: `Equi.Config.param_kinetic.n0 = 1e20` [m-3]
 
-* plasma density on the separatrix: `Equi.Config.param_kinetic.nsep = 1e17` [m-3]
+* plasma density on the separatrix $n_{sep}$: `Equi.Config.param_kinetic.nsep = 1e17` [m-3]
 
-* density profile coefficient a1: `Equi.Config.param_kinetic.a1 = 6`
+* density profile double-power exponent $a_1$: `Equi.Config.param_kinetic.a1 = 6`
 
-* density profile coefficient a2: `Equi.Config.param_kinetic.a2 = 3`
+* density profile double-power exponent $a_2$: `Equi.Config.param_kinetic.a2 = 3`
 
-Here are some examples of the kinetic profiles **n,p** and **T** vs **ψn**.
+Here are some examples of the kinetic profiles **n,p** and **T** vs **$ψ_n$**.
 
-We can now have a look at all fields that we have retrieved from the equilibrium solution.
+![Kinetics Profiles](/assets/images/SimPla_kinetic_profiles.png)
+
+We can now also have a look at all fields that we have retrieved from the equilibrium solution.
+
+![MHD fields](/assets/images/SimPla_MHD_fields.png)
 
 ### APPENDIX A
 
@@ -131,36 +137,49 @@ Our reference to the parametrisation of the plasma shape is:
 
 **J. Johner, 2011, HELIOS: a zero-dimensional tool for next step and reactor studies, Fusion Sci. Technol. 59 (February) 308–349.**
 
-Here is a basic illustration of all parameters needed for the parametrisation of the desired plasma shape. Differently from our reference, angles were denoted with  instead of  to avoid misinterpretation with the poloidal flux.
+Here is a basic illustration of all parameters needed for the parametrisation of the desired plasma shape. Differently from our reference, angles were denoted with $\gamma$ instead of $\psi$ to avoid misinterpretation with the poloidal flux.
+
+![Parametrisation](/assets/images/SimPla_parametrisation.png)
 
 Cross-section parametrisation:
+  Normalised Cylindrical Coordinates:
+    * $ \xi =  \frac{R-R_0}{a} $
+    * $ \zeta =  \frac{Z}{a} $
+  Parameters:
+    * $ \delta_1 = $ upper triangularity
+    * $ \delta_2 = $ lower triangularity
+    * $ \kappa_1 = $ upper elongation
+    * $ \kappa_2 = $ lower elongation
+    * $ \gamma^-_1 = $ inner upper angle
+    * $ \gamma^-_2 = $ inner lower angle
+    * $ \gamma^+_1 = $ outer upper angle
+    * $ \gamma^+_2 = $ outer lower angle
 
-Coordinates:
+Shape example 1: **Single X point** ($ \gamma^-_1 = \gamma^+_1 = 0° $)
 
-Parameters:
-
-;
-
-; 		;
-
-(Angles were denoted with  instead of  to avoid misinterpretation with the poloidal flux)
-
-Shape 1: Single X point ( )
+![Parametrisation ITER](/assets/images/SimPla_parametrisation_ITER.png)
 
 The reference for plasma toroidal current density profile is:
 
-Coleman M. and McIntosh S., 2020, The design and optimisation of tokamak poloidal field systems in the BLUEPRINT framework, Fusion Eng. Des. 154 111544
+**Coleman M. and McIntosh S., 2020, The design and optimisation of tokamak poloidal field systems in the BLUEPRINT framework, Fusion Eng. Des. 154 111544**
 
 Where Jt is defined as:
+$$
+J_t =
+\begin{cases}
 
-And ψn is the normalised poloidal flux .
+\lambda (\beta_0 \cdot \frac{R}{R_0} + (1 - \beta_0) \cdot \frac{R_0}{R}) \cdot (1 - \psi_n^\alpha_1)^\alpha_2 & \text{for } 0< \psi_n < 1 \\
+0 & text{elsewhere}
 
-λ and β0 are parameters that affect the plasma current integral value. The shape of the profile chosen is a double power function of the normalised poloidal flux and α1 and α2 are the exponents of such double power function.
+\end{cases}
+$$
+
+$ψ_n$ is the normalised poloidal flux $\psi_n = \frac{\psi-\psi_0}{\psi_{sep}-\psi_0}$
+
+$λ$ and $β_0$ are parameters that affect the plasma current integral value. The shape of the profile chosen is a double power function of the normalised poloidal flux and $α_1$ and $α_2$ are the exponents of such double power function.
 
 
 ## Python Guide
 
-
-
-Now, return to Main_equilibrium.m and run the code.
+Progresses about this guide will be released in the next future.
 
