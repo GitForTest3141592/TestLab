@@ -97,9 +97,9 @@ end
 ```
 
 Now, let's return to *Main_equilibrium.m* and let's run the code. 
-<p align="center" style="font-size: 60px; color: green;">
+<span style="font-size: 60px; color: green;">
   <i class="fas fa-play-circle"></i>
-</p>
+</span>
 
 All equilibrium quantities are computed and stored in `Equi` structure.
 
@@ -121,15 +121,15 @@ Use **Equilibrium_MHD_Fields.m** function if you are interested in retrieving MH
 
 **Attention:** before computing kinetic fields, you need to input some parameters on your plasma density profile:
 
-* peak plasma density $n_0$: `Equi.Config.param_kinetic.n0 = 1e20` [m-3]
+* peak plasma density $n_0$: `Equi.Config.param_kinetic.n0 = 1e20` [$m^-3$]
 
-* plasma density on the separatrix $n_{sep}$: `Equi.Config.param_kinetic.nsep = 1e17` [m-3]
+* plasma density on the separatrix $n_{sep}$: `Equi.Config.param_kinetic.nsep = 1e17` []
 
 * density profile double-power exponent $a_1$: `Equi.Config.param_kinetic.a1 = 6`
 
 * density profile double-power exponent $a_2$: `Equi.Config.param_kinetic.a2 = 3`
 
-Here are some examples of the kinetic profiles **n,p** and **T** vs **$ψ_n$**.
+Here are some examples of the kinetic profiles **n, p** and **T** vs $\boldsymbol{\psi}_n$.
 
 <p align="center">
   <img src="{{ '/assets/images/SimPla_kinetic_profiles.png' | relative_url }}" alt="Kinetics Profiles" width="50%"/>
@@ -181,7 +181,7 @@ The reference for plasma toroidal current density profile is:
 
 **Coleman M. and McIntosh S., 2020, The design and optimisation of tokamak poloidal field systems in the BLUEPRINT framework, Fusion Eng. Des. 154 111544**
 
-Where Jt is defined as:
+Where $J_t$ is defined as:
 
 $$
 J_t =
