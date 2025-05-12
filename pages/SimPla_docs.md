@@ -150,7 +150,7 @@ Our reference to the parametrisation of the plasma shape is:
 Here is a basic illustration of all parameters needed for the parametrisation of the desired plasma shape. Differently from our reference, angles were denoted with $\gamma$ instead of $\psi$ to avoid misinterpretation with the poloidal flux.
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_parametrisation.png' | relative_url }}" alt="Parametrisation" width="100%"/>
+  <img src="{{ '/assets/images/SimPla_parametrisation.png' | relative_url }}" alt="Parametrisation" width="50%"/>
 </p>
 
 Cross-section parametrisation:
@@ -174,7 +174,7 @@ Cross-section parametrisation:
 Shape example 1: **Single X point** ($ \gamma^-_1 = \gamma^+_1 = 0° $)
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_parametrisationITER.png' | relative_url }}" alt="Parametrisation ITER" width="70%"/>
+  <img src="{{ '/assets/images/SimPla_parametrisationITER.png' | relative_url }}" alt="Parametrisation ITER" width="35%"/>
 </p>
 
 The reference for plasma toroidal current density profile is:
