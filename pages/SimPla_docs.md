@@ -1,6 +1,7 @@
 ---
 layout: splash
 title: SimPla - Simulated Plasma
+math: true
 permalink: /SimPla/
 ---
 
