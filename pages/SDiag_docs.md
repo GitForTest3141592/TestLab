@@ -19,6 +19,12 @@ The standard configuration is shown in Figure 1.
   <img src="{{ '/assets/images/SDiag_Figure_1.png' | relative_url }}" alt="Standard TokaLab Diagnostics setup" width="100%"/>
 </p>
 
+The configuration provided by TokaLab is denoted as "Configuration 1." It is characterized by the quantities shown in Figure 1, where each measurement is Gaussian distributed with noise having a standard deviation of 10% of the standard deviation of measurements of the same kind (but ideal values are always accessible in the "ideal" substructure of each diagnostic structure). Each user can add their own configuration by varying the number of diagnostics, their location, and their measurement uncertainty.
+In this document, a brief comment on the code is first provided, and the TokaLab configuration for diagnostics is shown. Examples are then presented to demonstrate how to change the hyperparameters.
+It is first necessary to load an equilibrium (available through the execution of Main_Equilibrium.mat, for which users can find documentation in the dedicated section) and the file containing information on the geometry. For the provided configuration, magnetic diagnostics data are loaded through MATLAB files. These files contain information about the location of the coils and, for pick-up coils, information on their unit vector describing the coils' orientation.
+Each diagnostic is then treated within a specific code section. Users can change the location or number of diagnostics by loading a file containing the desired information of this type and then adding another else if condition (with configuration == i, i > 1), copying the content of the first case and modifying the noise level, for example.
+For Thomson Scattering and Interferometer-Polarimeter, no file needs to be loaded before running the code. However, information related to the position of the diagnostics can be changed in the ThomsonScattering.m or InterferometerPolarimeter.m functions in the very first lines.
+
 ### EXAMPLE 1: SOLVE AN ITER-LIKE CONFIGURATION
 
 First steps require to define essential geometrical and plasma parameters of your configuration.
