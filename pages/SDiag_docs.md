@@ -16,7 +16,7 @@ The code "Main_Diagnostics.mat" allows for the design of the diagnostics setup. 
 The standard configuration is shown in Figure 1.
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_convergence_solution.png' | relative_url }}" alt="Solution Convergence" width="100%"/>
+  <img src="{{ '/assets/images/SDiag_Figure1.png' | relative_url }}" alt="Solution Convergence" width="100%"/>
 </p>
 
 ### EXAMPLE 1: SOLVE AN ITER-LIKE CONFIGURATION
