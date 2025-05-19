@@ -16,7 +16,7 @@ The code "Main_Diagnostics.mat" allows for the design of the diagnostics setup. 
 The standard configuration is shown in Figure 1.
 
 <p align="center">
-  <img src="{{'/assets/images/SDiag_Figure_1.png' | relative_url }}" alt="Standard TokaLab Diagnostics setup" width="100%"/>
+  <img src="{{'TestLab/assets/images/SDiag_Figure_1.png'}}" alt="Standard TokaLab Diagnostics setup" width="100%"/>
 </p>
 
 The configuration provided by TokaLab is denoted as "Configuration 1." It is characterized by the quantities shown in Figure 1, where each measurement is Gaussian distributed with noise having a standard deviation of 10% of the standard deviation of measurements of the same kind (but ideal values are always accessible in the "ideal" substructure of each diagnostic structure). Each user can add their own configuration by varying the number of diagnostics, their location, and their measurement uncertainty.
