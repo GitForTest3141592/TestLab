@@ -16,7 +16,7 @@ The code "Main_Diagnostics.mat" allows for the design of the diagnostics setup. 
 The standard configuration is shown in Figure 1.
 
 <p align="center">
-  <img src="{{'TestLab/assets/images/SDiag_Figure_1.png'}}" alt="Standard TokaLab Diagnostics setup" width="100%"/>
+  <img src="{{ 'assets/images/SDiag_Figure_1.png' }}" alt="Standard TokaLab Diagnostics setup">
 </p>
 
 The configuration provided by TokaLab is denoted as "Configuration 1." It is characterized by the quantities shown in Figure 1, where each measurement is Gaussian distributed with noise having a standard deviation of 10% of the standard deviation of measurements of the same kind (but ideal values are always accessible in the "ideal" substructure of each diagnostic structure). Each user can add their own configuration by varying the number of diagnostics, their location, and their measurement uncertainty.
@@ -31,95 +31,26 @@ All the following examples relate to the use of noisy measurements.
 Modifying Pick-Up coils location and orientation can be done by loading a file that simply contains information on R, z, and the poloidal angle in the same format provided through the standard configuration setting of the pick-up coils (a horizontal vector for R, a horizontal vector for Z, and a 3 x i matrix, with i = number of pick-up coils, indicating the components of the unit vector describing the coil orientation). In our case we used a MATLAB file, but a .txt or other format can be used by just modifying the loading function in line 6 of PickUpCoils.m (and the same for FluxLoops.m and SaddleLoops.m). An example of the new configuration obtained is shown in Figure 2.
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_convergence_solution.png' | relative_url }}" alt="Solution Convergence" width="100%"/>
+  <img src="{{ 'assets/images/Ex1_M.png' }}" alt="New configuration of Pick-up Coils setup. It has been changed the position and orientation of each coil. On the right, measurement values are reported">
 </p>
 
-We can also see the Last Closed Flux Surface (`Equi.LCFS.R`, `Equi.LCFS.Z`) and highlight the coordinates of the magnetic axis (`Equi.Opoint_R`, `Equi.Opoint_Z`) and the X point (`Equi.Xpoint_R`, `Equi.Xpoint_Z`).
+### EXAMPLE 2: Modelling a vertical Thomson Scattering
+
+In this case, a vertical Thomson Scattering has been simulated by simply changing the reference of D_TS.config.type (set, for example, to 2 in line 59 in this case) and adding an elseif condition in the ThomsonScattering.m function where it is possible to set new values for R and Z.
+The results obtained for the selected coordinates are shown in Figure 3.
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_LCFS.png' | relative_url }}" alt="LCFS" width="60%"/>
+  <img src="{{ 'assets/images/Ex2_TS.png' }}" alt="Vertical Configuration of the Thomson Scattering">
 </p>
 
-Once you normalise the poloidal flux $ψ_n$ (see **Equilibrium_normalise.m**), you can derive all MHD fields (`Equi.Bt`, `Equi. Br`, `Equi.Bz`, `Equi.Jt`, `Equi. Jr`, `Equi.Jz`) and kinetic fields (`Equi.p`, `Equi.n`, `Equi.T`).
+### EXAMPLE 3: Changing Laser Wavelength in Interferometer-Polarimeter
 
-Use **Equilibrium_MHD_Fields.m** function if you are interested in retrieving MHD fields and **Equilibrium_KineticProfiles.m** function if you are interested in kinetic fields.
-
-**Attention:** before computing kinetic fields, you need to input some parameters on your plasma density profile:
-
-* peak plasma density $n_0$: `Equi.Config.param_kinetic.n0 = 1e20` [$m^-3$]
-
-* plasma density on the separatrix $n_{sep}$: `Equi.Config.param_kinetic.nsep = 1e17` []
-
-* density profile double-power exponent $a_1$: `Equi.Config.param_kinetic.a1 = 6`
-
-* density profile double-power exponent $a_2$: `Equi.Config.param_kinetic.a2 = 3`
-
-Here are some examples of the kinetic profiles **n, p** and **T** vs $\boldsymbol{\psi}_n$.
+This example can be useful for simulating different behaviors of polarimetric measurements at different values of λ. This can be easily done by changing the configuration type number in line 74 and adding another elseif condition in the InterferometerPolarimeter.m MATLAB function. The wavelength can be changed in line 84 of the main code, for example.
+The results obtained are shown in Figure 4.
 
 <p align="center">
-  <img src="{{ '/assets/images/SimPla_kinetic_profiles.png' | relative_url }}" alt="Kinetics Profiles" width="50%"/>
+  <img src="{{ 'assets/images/Ex3_IP.png' }}" alt="New measurements obtained for Faraday rotation and Cotton-Mouton phase shift due to the variation of laser wavelength">
 </p>
-
-We can now also have a look at all fields that we have retrieved from the equilibrium solution.
-
-<p align="center">
-  <img src="{{ '/assets/images/SimPla_MHD_fields.png' | relative_url }}" alt="MHD fields" width="70%"/>
-</p>
-
-### APPENDIX A
-
-Our reference to the parametrisation of the plasma shape is:
-
-**J. Johner, 2011, HELIOS: a zero-dimensional tool for next step and reactor studies, Fusion Sci. Technol. 59 (February) 308–349.**
-
-Here is a basic illustration of all parameters needed for the parametrisation of the desired plasma shape. Differently from our reference, angles were denoted with $\gamma$ instead of $\psi$ to avoid misinterpretation with the poloidal flux.
-
-<p align="center">
-  <img src="{{ '/assets/images/SimPla_parametrisation.png' | relative_url }}" alt="Parametrisation" width="60%"/>
-</p>
-
-**Cross-section parametrisation:**
-
-  Normalised Cylindrical Coordinates:
-  
-  * $ \xi =  \frac{R-R_0}{a} $
-  * $ \zeta =  \frac{Z}{a} $
-    
-  Parameters:
-  
-  * $ \delta_1 = $ upper triangularity
-  * $ \delta_2 = $ lower triangularity
-  * $ \kappa_1 = $ upper elongation
-  * $ \kappa_2 = $ lower elongation
-  * $ \gamma^-_1 = $ inner upper angle
-  * $ \gamma^-_2 = $ inner lower angle
-  * $ \gamma^+_1 = $ outer upper angle
-  * $ \gamma^+_2 = $ outer lower angle
-
-Shape example 1: **Single X point** ($ \gamma^-_1 = \gamma^+_1 = 0° $)
-
-<p align="center">
-  <img src="{{ '/assets/images/SimPla_parametrisationITER.png' | relative_url }}" alt="Parametrisation ITER" width="35%"/>
-</p>
-
-The reference for plasma toroidal current density profile is:
-
-**Coleman M. and McIntosh S., 2020, The design and optimisation of tokamak poloidal field systems in the BLUEPRINT framework, Fusion Eng. Des. 154 111544**
-
-Where $J_t$ is defined as:
-
-$$
-J_t =
-\begin{cases}
-\lambda \left( \beta_0 \cdot \frac{R}{R_0} + (1 - \beta_0) \cdot \frac{R_0}{R} \right) \cdot \left(1 - \psi_n^{\alpha_1}\right)^{\alpha_2} & \text{for } 0 < \psi_n < 1 \\
-0 & \text{elsewhere}
-\end{cases}
-$$
-
-$ψ_n$ is the normalised poloidal flux $\psi_n = \frac{\psi-\psi_0}{\psi_{sep}-\psi_0}$
-
-$λ$ and $β_0$ are parameters that affect the plasma current integral value. The shape of the profile chosen is a double power function of the normalised poloidal flux and $α_1$ and $α_2$ are the exponents of such double power function.
-
 
 ## Python Guide
 
