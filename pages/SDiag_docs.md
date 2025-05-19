@@ -24,98 +24,11 @@ In this document, a brief comment on the code is first provided, and the TokaLab
 It is first necessary to load an equilibrium (available through the execution of Main_Equilibrium.mat, for which users can find documentation in the dedicated section) and the file containing information on the geometry. For the provided configuration, magnetic diagnostics data are loaded through MATLAB files. These files contain information about the location of the coils and, for pick-up coils, information on their unit vector describing the coils' orientation.
 Each diagnostic is then treated within a specific code section. Users can change the location or number of diagnostics by loading a file containing the desired information of this type and then adding another else if condition (with configuration == i, i > 1), copying the content of the first case and modifying the noise level, for example.
 For Thomson Scattering and Interferometer-Polarimeter, no file needs to be loaded before running the code. However, information related to the position of the diagnostics can be changed in the ThomsonScattering.m or InterferometerPolarimeter.m functions in the very first lines.
+All the following examples relate to the use of noisy measurements. 
 
-### EXAMPLE 1: SOLVE AN ITER-LIKE CONFIGURATION
+### EXAMPLE 1: Modifying Pick Up Coils location an dorientation
 
-First steps require to define essential geometrical and plasma parameters of your configuration.
-
-All geometrical parameters are collected in a structure called `Geo` . In **Main_equilibrium.m**, we define first two geometrical parameters: 
-
-* major radius: `Geo.R0 = 6` [m]
-
-* minor radius: `Geo.a = 2` [m] 
-
-```matlab
-%% Define Geometry (Geo)
-
-Geo.R0 = 6;
-Geo.a = 2;
-```
-
-All plasma equilibrium parameters are collected in the structure `Equi`, more specifically in its substructure `Equi.Config.param`.
-
-Open **Equilibrium_boundary.m**, where you can input desired parameters through the function **Equi_type_Jt_I_Config.m** or by uploading your own file containing all data.
-
-So, let’s now open **Equi_type_Jt_I_Config.m**.
-
-First plasma equilibrium parameters are related to the desired plasma shape (for a better understanding, please refer to **Appendix A**), and they are:
-
-* upper elongation: `Equi.Config.param.k1 = 1.7`
-
-* lower elongation: `Equi.Config.param.k2 = 2`
-
-* upper triangularity: `Equi.Config.param.d1 = 0.5`
-
-* lower triangularity: `Equi.Config.param.d2 = 0.5`
-
-* upper inner angle: `Equi.Config.param.gamma_n_1 = 0` [radians]
-
-* lower inner angle: `Equi.Config.param.gamma_n_2 = pi/3` [radians]
-
-* upper outer angle: `Equi.Config.param.gamma_p_1 = 0` [radians]
-
-* lower outer angle: `Equi.Config.param.gamma_p_2 = pi/6` [radians]
-
-Other parameters are related to the plasma current profile and magnetic field:
-
-* total plasma current `Equi.Config.param.Ip = -10e6` [A]
-
-* plasma profile coefficient $β_0$: `Equi.Config.param.beta0 = 0.5`
-
-* plasma profile coefficient $α_1$: `Equi.Config.param.alpha1 = 2`
-
-* plasma profile coefficient $α_2$: `Equi.Config.param.alpha2 = 2`
-
-* toroidal magnetic field on axis: `Equi.Config.param.Bt0 = 5`;
-
-And lastly, parameters related to the numerical solver:
-
-* Maximum number of iterations: `Equi.Config.param.Max_iter = 30`
-
-* Stop condition on convergence error: `Equi.Config.param.Error_conv = 1e-5`
-
-```matlab
-function Equi = Equi_type_Jt_I_Config()
-
-Equi.Config.param.k1 = 1.7;
-Equi.Config.param.k2 = 2;
-Equi.Config.param.d1 = 0.5;
-Equi.Config.param.d2 = 0.5;
-Equi.Config.param.gamma_n_1 = pi/9;
-Equi.Config.param.gamma_n_2 = pi/3;
-Equi.Config.param.gamma_p_1 = pi/8;
-Equi.Config.param.gamma_p_2 = pi/6;
-
-Equi.Config.param.Ip = -10e6;
-Equi.Config.param.Bt0 = 5;
-
-Equi.Config.param.Max_iter = 30;
-Equi.Config.param.Error_conv = 1e-5;
-Equi.Config.param.beta0 = 0.5;
-Equi.Config.param.alpha1 = 2;
-Equi.Config.param.alpha2 = 2;
-
-end
-```
-
-Now, let's return to *Main_equilibrium.m* and let's run the code. 
-<span style="font-size: 40px; color: green;">
-  <i class="fas fa-play-circle"></i>
-</span>
-
-All equilibrium quantities are computed and stored in `Equi` structure.
-
-Now, we can see a plot of the poloidal flux $ψ$ [Wb/radians] `(Equi.psi)`.
+Modifying Pick-Up coils location and orientation can be done by loading a file that simply contains information on R, z, and the poloidal angle in the same format provided through the standard configuration setting of the pick-up coils (a horizontal vector for R, a horizontal vector for Z, and a 3 x i matrix, with i = number of pick-up coils, indicating the components of the unit vector describing the coil orientation). In our case we used a MATLAB file, but a .txt or other format can be used by just modifying the loading function in line 6 of PickUpCoils.m (and the same for FluxLoops.m and SaddleLoops.m). An example of the new configuration obtained is shown in Figure 2.
 
 <p align="center">
   <img src="{{ '/assets/images/SimPla_convergence_solution.png' | relative_url }}" alt="Solution Convergence" width="100%"/>
