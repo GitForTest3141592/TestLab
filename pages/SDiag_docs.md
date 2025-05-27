@@ -31,7 +31,7 @@ All the following examples relate to the use of noisy measurements.
 Modifying Pick-Up coils location and orientation can be done by loading a file that simply contains information on R, z, and the poloidal angle in the same format provided through the standard configuration setting of the pick-up coils (a horizontal vector for R, a horizontal vector for Z, and a 3 x i matrix, with i = number of pick-up coils, indicating the components of the unit vector describing the coil orientation). In our case we used a MATLAB file, but a .txt or other format can be used by just modifying the loading function in line 6 of PickUpCoils.m (and the same for FluxLoops.m and SaddleLoops.m). An example of the new configuration obtained is shown in Figure 2.
 
 <p align="center">
-  <img src="{{ '/assets/images/Ex1_M.png' }}" alt="New configuration of Pick-up Coils setup. It has been changed the position and orientation of each coil. On the right, measurement values are reported">
+  <img src="{{ '/assets/images/Ex1_M.png' | relative_url }}" alt="New configuration of Pick-up Coils setup. It has been changed the position and orientation of each coil. On the right, measurement values are reported">
 </p>
 
 ### EXAMPLE 2: Modelling a vertical Thomson Scattering
