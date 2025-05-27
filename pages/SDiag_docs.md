@@ -40,7 +40,7 @@ In this case, a vertical Thomson Scattering has been simulated by simply changin
 The results obtained for the selected coordinates are shown in Figure 3.
 
 <p align="center">
-  <img src="{{ 'assets/images/Ex2_TS.png' }}" alt="Vertical Configuration of the Thomson Scattering">
+  <img src="{{ '/assets/images/Ex2_TS.png' | relative_url }}" alt="Vertical Configuration of the Thomson Scattering">
 </p>
 
 ### EXAMPLE 3: Changing Laser Wavelength in Interferometer-Polarimeter
@@ -49,7 +49,7 @@ This example can be useful for simulating different behaviors of polarimetric me
 The results obtained are shown in Figure 4.
 
 <p align="center">
-  <img src="{{ 'assets/images/Ex3_IP.png' }}" alt="New measurements obtained for Faraday rotation and Cotton-Mouton phase shift due to the variation of laser wavelength">
+  <img src="{{ '/assets/images/Ex3_IP.png' | relative_url}}" alt="New measurements obtained for Faraday rotation and Cotton-Mouton phase shift due to the variation of laser wavelength">
 </p>
 
 ## Python Guide
