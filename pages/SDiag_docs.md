@@ -16,7 +16,7 @@ The code "Main_Diagnostics.mat" allows for the design of the diagnostics setup. 
 The standard configuration is shown in Figure 1.
 
 <p align="center">
-  <img src="{{ 'assets/images/SDiag_Figure_1.png' }}" alt="Standard TokaLab Diagnostics setup">
+  <img src="{{ '/assets/images/SDiag_Figure_1.png' }}" alt="Standard TokaLab Diagnostics setup">
 </p>
 
 The configuration provided by TokaLab is denoted as "Configuration 1." It is characterized by the quantities shown in Figure 1, where each measurement is Gaussian distributed with noise having a standard deviation of 10% of the standard deviation of measurements of the same kind (but ideal values are always accessible in the "ideal" substructure of each diagnostic structure). Each user can add their own configuration by varying the number of diagnostics, their location, and their measurement uncertainty.
@@ -31,7 +31,7 @@ All the following examples relate to the use of noisy measurements.
 Modifying Pick-Up coils location and orientation can be done by loading a file that simply contains information on R, z, and the poloidal angle in the same format provided through the standard configuration setting of the pick-up coils (a horizontal vector for R, a horizontal vector for Z, and a 3 x i matrix, with i = number of pick-up coils, indicating the components of the unit vector describing the coil orientation). In our case we used a MATLAB file, but a .txt or other format can be used by just modifying the loading function in line 6 of PickUpCoils.m (and the same for FluxLoops.m and SaddleLoops.m). An example of the new configuration obtained is shown in Figure 2.
 
 <p align="center">
-  <img src="{{ 'assets/images/Ex1_M.png' }}" alt="New configuration of Pick-up Coils setup. It has been changed the position and orientation of each coil. On the right, measurement values are reported">
+  <img src="{{ '/assets/images/Ex1_M.png' }}" alt="New configuration of Pick-up Coils setup. It has been changed the position and orientation of each coil. On the right, measurement values are reported">
 </p>
 
 ### EXAMPLE 2: Modelling a vertical Thomson Scattering
